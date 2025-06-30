@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "petId": 1,
+    "name": "Rabies",
+    "dateGiven": "2023-03-15",
+    "nextDueDate": "2024-03-15",
+    "veterinarian": "Dr. Smith",
+    "notes": "Annual rabies vaccination - no adverse reactions"
+  },
+  {
+    "Id": 2,
+    "petId": 1,
+    "name": "DHPP",
+    "dateGiven": "2023-03-15",
+    "nextDueDate": "2024-03-15",
+    "veterinarian": "Dr. Smith",
+    "notes": "Distemper, Hepatitis, Parvovirus, Parainfluenza combo"
+  },
+  {
+    "Id": 3,
+    "petId": 2,
+    "name": "FVRCP",
+    "dateGiven": "2023-07-22",
+    "nextDueDate": "2024-07-22",
+    "veterinarian": "Dr. Johnson",
+    "notes": "Feline Viral Rhinotracheitis, Calicivirus, Panleukopenia"
+  },
+  {
+    "Id": 4,
+    "petId": 2,
+    "name": "Rabies",
+    "dateGiven": "2023-07-22",
+    "nextDueDate": "2024-07-22",
+    "veterinarian": "Dr. Johnson",
+    "notes": "Annual rabies shot for indoor cat"
+  }
+]

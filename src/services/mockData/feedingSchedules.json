@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "petId": 1,
+    "time": "07:00",
+    "amount": "1 cup dry food",
+    "notes": "Morning meal with supplements",
+    "enabled": true
+  },
+  {
+    "Id": 2,
+    "petId": 1,
+    "time": "18:00",
+    "amount": "1 cup dry food",
+    "notes": "Evening meal",
+    "enabled": true
+  },
+  {
+    "Id": 3,
+    "petId": 2,
+    "time": "08:00",
+    "amount": "1/2 cup wet food",
+    "notes": "Morning meal",
+    "enabled": true
+  },
+  {
+    "Id": 4,
+    "petId": 2,
+    "time": "19:00",
+    "amount": "1/2 cup wet food",
+    "notes": "Evening meal",
+    "enabled": true
+  },
+  {
+    "Id": 5,
+    "petId": 3,
+    "time": "09:00",
+    "amount": "2 tablespoons seed mix",
+    "notes": "Fresh water daily",
+    "enabled": true
+  }
+]

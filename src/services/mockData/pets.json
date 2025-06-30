@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "name": "Buddy",
+    "type": "dog",
+    "breed": "Golden Retriever",
+    "birthDate": "2020-03-15",
+    "photoUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop&crop=face",
+    "notes": "Very friendly and loves to play fetch. Allergic to chicken."
+  },
+  {
+    "Id": 2,
+    "name": "Whiskers",
+    "type": "cat",
+    "breed": "Maine Coon",
+    "birthDate": "2019-07-22",
+    "photoUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop&crop=face",
+    "notes": "Indoor cat, very calm and loves to cuddle."
+  },
+  {
+    "Id": 3,
+    "name": "Charlie",
+    "type": "bird",
+    "breed": "Cockatiel",
+    "birthDate": "2021-11-08",
+    "photoUrl": "",
+    "notes": "Loves to whistle and mimic sounds. Very social."
+  }
+]

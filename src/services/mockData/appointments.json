@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "petId": 1,
+    "type": "checkup",
+    "dateTime": "2024-02-15T10:00:00",
+    "veterinarian": "Dr. Smith",
+    "reason": "Annual checkup",
+    "notes": "Regular health examination and weight check",
+    "completed": false
+  },
+  {
+    "Id": 2,
+    "petId": 2,
+    "type": "vaccination",
+    "dateTime": "2024-01-10T14:30:00",
+    "veterinarian": "Dr. Johnson",
+    "reason": "Rabies vaccination",
+    "notes": "Annual rabies shot",
+    "completed": true
+  },
+  {
+    "Id": 3,
+    "petId": 1,
+    "type": "dental",
+    "dateTime": "2024-03-20T11:00:00",
+    "veterinarian": "Dr. Brown",
+    "reason": "Dental cleaning",
+    "notes": "Professional teeth cleaning",
+    "completed": false
+  },
+  {
+    "Id": 4,
+    "petId": 3,
+    "type": "checkup",
+    "dateTime": "2024-02-28T16:00:00",
+    "veterinarian": "Dr. Wilson",
+    "reason": "Wing examination",
+    "notes": "Check wing mobility after minor injury",
+    "completed": false
+  }
+]

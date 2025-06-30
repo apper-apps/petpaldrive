@@ -1,0 +1,85 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F5FF;
+}
+
+.Toastify__toast-container {
+  width: auto;
+  max-width: 400px;
+}
+
+.Toastify__toast {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(91, 78, 140, 0.15);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-height: 48px;
+  padding: 12px 16px;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A52 100%);
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #4A90E2 0%, #5B4E8C 100%);
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white font-medium px-6 py-3 rounded-lg 
+           shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary to-primary text-white font-medium px-4 py-2 rounded-lg 
+           shadow-md hover:shadow-lg transform hover:scale-102 transition-all duration-150 
+           focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent to-pink-500 text-white font-medium px-6 py-3 rounded-lg 
+           shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+  }
+  
+  .card {
+    @apply bg-surface rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 p-6;
+  }
+  
+  .card-hover {
+    @apply transform hover:scale-102 hover:-translate-y-1;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary 
+           focus:border-transparent transition-all duration-200 bg-white;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .overdue-pulse {
+    @apply animate-pulse-gentle;
+  }
+}

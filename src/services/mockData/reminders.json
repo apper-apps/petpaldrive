@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "petId": 1,
+    "type": "feeding",
+    "title": "Morning feeding time",
+    "dateTime": "2024-01-20T07:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  },
+  {
+    "Id": 2,
+    "petId": 1,
+    "type": "feeding",
+    "title": "Evening feeding time",
+    "dateTime": "2024-01-20T18:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  },
+  {
+    "Id": 3,
+    "petId": 2,
+    "type": "appointment",
+    "title": "Vet appointment reminder",
+    "dateTime": "2024-02-14T09:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  },
+  {
+    "Id": 4,
+    "petId": 1,
+    "type": "vaccination",
+    "title": "Vaccination due soon",
+    "dateTime": "2024-02-10T10:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  },
+  {
+    "Id": 5,
+    "petId": 2,
+    "type": "feeding",
+    "title": "Morning feeding time",
+    "dateTime": "2024-01-20T08:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  },
+  {
+    "Id": 6,
+    "petId": 3,
+    "type": "feeding",
+    "title": "Daily feeding time",
+    "dateTime": "2024-01-20T09:00:00",
+    "completed": false,
+    "snoozedUntil": null
+  }
+]
