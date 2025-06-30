@@ -21,10 +21,13 @@ theme: {
         'display': ['Fredoka One', 'cursive'],
         'body': ['Inter', 'sans-serif'],
       },
-      scale: {
+scale: {
         '101': '1.01',
         '102': '1.02',
         '103': '1.03',
+      },
+      spacing: {
+        '18': '4.5rem',
       },
       animation: {
         'checkmark': 'checkmark 0.5s ease-out',

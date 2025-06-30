@@ -5,8 +5,10 @@
     "type": "dog",
     "breed": "Golden Retriever",
     "birthDate": "2020-03-15",
-    "photoUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop&crop=face",
-    "notes": "Very friendly and loves to play fetch. Allergic to chicken."
+"photoUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop&crop=face",
+    "notes": "Very friendly and loves to play fetch. Allergic to chicken.",
+    "appetite": 7,
+    "energy": 8
   },
   {
     "Id": 2,
@@ -14,8 +16,10 @@
     "type": "cat",
     "breed": "Maine Coon",
     "birthDate": "2019-07-22",
-    "photoUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop&crop=face",
-    "notes": "Indoor cat, very calm and loves to cuddle."
+"photoUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop&crop=face",
+    "notes": "Indoor cat, very calm and loves to cuddle.",
+    "appetite": 6,
+    "energy": 4
   },
   {
     "Id": 3,
@@ -23,7 +27,9 @@
     "type": "bird",
     "breed": "Cockatiel",
     "birthDate": "2021-11-08",
-    "photoUrl": "",
-    "notes": "Loves to whistle and mimic sounds. Very social."
+"photoUrl": "",
+    "notes": "Loves to whistle and mimic sounds. Very social.",
+    "appetite": 8,
+    "energy": 9
   }
 ]

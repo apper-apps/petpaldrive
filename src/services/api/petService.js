@@ -35,7 +35,7 @@ export const update = async (id, petData) => {
   const index = pets.findIndex(p => p.Id === id)
   if (index === -1) {
     throw new Error('Pet not found')
-  }
+}
   pets[index] = { ...pets[index], ...petData }
   return { ...pets[index] }
 }
