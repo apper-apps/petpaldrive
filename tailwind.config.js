@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+theme: {
     extend: {
       colors: {
         primary: '#5B4E8C',
@@ -20,6 +20,11 @@ export default {
       fontFamily: {
         'display': ['Fredoka One', 'cursive'],
         'body': ['Inter', 'sans-serif'],
+      },
+      scale: {
+        '101': '1.01',
+        '102': '1.02',
+        '103': '1.03',
       },
       animation: {
         'checkmark': 'checkmark 0.5s ease-out',
