@@ -22,18 +22,17 @@ import * as appointmentService from "@/services/api/appointmentService";
 const PetDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-const navigate = useNavigate();
   const [pet, setPet] = useState(null);
   const [feedingSchedules, setFeedingSchedules] = useState([]);
   const [appointments, setAppointments] = useState([]);
   const [vaccinations, setVaccinations] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [activeTab, setActiveTab] = useState('overview');
-const [activeTab, setActiveTab] = useState('overview');
   const [appetite, setAppetite] = useState(5);
   const [energy, setEnergy] = useState(5);
-const loadData = async () => {
+
+  const loadData = async () => {
     try {
       setLoading(true);
       setError('');
@@ -50,28 +49,28 @@ vaccinationService.getAll()
       setEnergy(petData?.energy || 5);
       setFeedingSchedules(feedingData.filter(f => f.petId === parseInt(id)));
       setAppointments(appointmentData.filter(a => a.petId === parseInt(id)));
-      setVaccinations(vaccinationData.filter(v => v.petId === parseInt(id)));
+setVaccinations(vaccinationData.filter(v => v.petId === parseInt(id)));
     } catch (err) {
-} catch (err) {
       setError('Failed to load pet details');
       console.error('Error loading pet details:', err);
     } finally {
       setLoading(false);
     }
   };
-useEffect(() => {
+
+  useEffect(() => {
     loadData();
-  }, [id]);
-const handleToggleFeedingSchedule = async (scheduleId) => {
+}, [id]);
+
+  const handleToggleFeedingSchedule = async (scheduleId) => {
     try {
       const schedule = feedingSchedules.find(s => s.Id === scheduleId);
       if (!schedule) return;
       
       const updated = await feedingService.update(scheduleId, { 
         enabled: !schedule.enabled
-enabled: !schedule.enabled 
       });
-      setFeedingSchedules(prev => 
+      setFeedingSchedules(prev =>
         prev.map(s => s.Id === scheduleId ? updated : s)
       );
       toast.success(`Feeding schedule ${updated.enabled ? 'enabled' : 'disabled'}`);
@@ -116,10 +115,8 @@ const handleUpdateTracking = async (field, value) => {
       toast.error(`Failed to update ${field} level`);
     }
   };
-
-  const getAgeText = (birthDate) => {
+const getAgeText = (birthDate) => {
     if (!birthDate) return 'Unknown age';
-if (!birthDate) return 'Unknown age';
     const today = new Date();
     const birth = new Date(birthDate);
     const years = today.getFullYear() - birth.getFullYear();
