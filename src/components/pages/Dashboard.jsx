@@ -1,19 +1,22 @@
-import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { toast } from 'react-toastify'
-import { format, isToday, isPast } from 'date-fns'
-import QuickStats from '@/components/molecules/QuickStats'
-import ReminderCard from '@/components/molecules/ReminderCard'
-import Button from '@/components/atoms/Button'
-import Card from '@/components/atoms/Card'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import ApperIcon from '@/components/ApperIcon'
-import * as petService from '@/services/api/petService'
-import * as reminderService from '@/services/api/reminderService'
-import * as feedingService from '@/services/api/feedingService'
-import * as appointmentService from '@/services/api/appointmentService'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import { format, isPast, isToday } from "date-fns";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import Card from "@/components/atoms/Card";
+import Empty from "@/components/ui/Empty";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import Reminders from "@/components/pages/Reminders";
+import Schedule from "@/components/pages/Schedule";
+import QuickStats from "@/components/molecules/QuickStats";
+import ReminderCard from "@/components/molecules/ReminderCard";
+import { getAll, update } from "@/services/api/vaccinationService";
+import * as petService from "@/services/api/petService";
+import * as appointmentService from "@/services/api/appointmentService";
+import * as reminderService from "@/services/api/reminderService";
+import * as feedingService from "@/services/api/feedingService";
 
 const Dashboard = () => {
   const [pets, setPets] = useState([])
@@ -116,20 +119,20 @@ const Dashboard = () => {
   const todaysReminders = getTodaysReminders()
   const upcomingAppointments = getUpcomingAppointments()
 
-  return (
+return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="space-y-8"
+      className="space-y-6 sm:space-y-8 px-4 sm:px-0"
     >
       {/* Header */}
       <div className="text-center space-y-2">
-        <h1 className="text-3xl font-display gradient-text">Welcome back!</h1>
-        <p className="text-gray-600">Here's what's happening with your pets today</p>
+        <h1 className="text-2xl sm:text-3xl font-display gradient-text">Welcome back!</h1>
+        <p className="text-sm sm:text-base text-gray-600">Here's what's happening with your pets today</p>
       </div>
 
-      {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+{/* Quick Stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <QuickStats
           title="Total Pets"
           value={pets.length}
@@ -153,12 +156,12 @@ const Dashboard = () => {
           value={getOverdueCount()}
           icon="AlertTriangle"
           color="warning"
-        />
+/>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         {/* Today's Reminders */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold text-gray-900">Today's Tasks</h2>
             <Button
@@ -193,50 +196,50 @@ const Dashboard = () => {
                 )
               })}
             </div>
-          )}
+)}
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Quick Actions */}
           <Card>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
             <div className="space-y-3">
               <Button
                 variant="primary"
-                size="sm"
+                size="md"
                 icon="Plus"
-                className="w-full justify-start"
+                className="w-full justify-start h-12 text-base font-medium"
                 onClick={() => window.location.href = '/pets'}
               >
                 Add New Pet
               </Button>
               <Button
                 variant="outline"
-                size="sm"
+                size="md"
                 icon="Calendar"
-                className="w-full justify-start"
+                className="w-full justify-start h-12 text-base font-medium"
                 onClick={() => window.location.href = '/schedule'}
               >
                 Schedule Appointment
               </Button>
               <Button
                 variant="ghost"
-                size="sm"
+                size="md"
                 icon="Bell"
-                className="w-full justify-start"
+                className="w-full justify-start h-12 text-base font-medium"
                 onClick={() => window.location.href = '/reminders'}
               >
                 View All Reminders
               </Button>
-            </div>
+</div>
           </Card>
 
           {/* Upcoming Appointments */}
           <Card>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Appointments</h3>
             {upcomingAppointments.length === 0 ? (
-              <div className="text-center py-4">
+              <div className="text-center py-6">
                 <ApperIcon name="Calendar" size={32} className="text-gray-400 mx-auto mb-2" />
                 <p className="text-sm text-gray-500">No upcoming appointments</p>
               </div>
@@ -245,13 +248,13 @@ const Dashboard = () => {
                 {upcomingAppointments.map((appointment) => {
                   const pet = pets.find(p => p.Id === appointment.petId)
                   return (
-                    <div key={appointment.Id} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                      <div className="p-2 bg-gradient-to-r from-warning to-orange-500 rounded-lg text-white">
+                    <div key={appointment.Id} className="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 rounded-lg">
+<div className="p-2 bg-gradient-to-r from-warning to-orange-500 rounded-lg text-white flex-shrink-0">
                         <ApperIcon name="Calendar" size={16} />
                       </div>
-                      <div className="flex-1">
-                        <p className="font-medium text-sm">{appointment.reason}</p>
-                        <p className="text-xs text-gray-600">{pet?.name}</p>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium text-sm sm:text-base truncate">{appointment.reason}</p>
+                        <p className="text-xs sm:text-sm text-gray-600 truncate">{pet?.name}</p>
                         <p className="text-xs text-gray-500">
                           {format(new Date(appointment.dateTime), 'MMM d, h:mm a')}
                         </p>
