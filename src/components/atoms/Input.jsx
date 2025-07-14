@@ -9,7 +9,7 @@ const Input = forwardRef(({
   ...props 
 }, ref) => {
   return (
-    <div className="space-y-2">
+<div className="space-y-1.5 sm:space-y-2">
       {label && (
         <label className="block text-sm font-medium text-gray-700">
           {label}
@@ -22,8 +22,8 @@ const Input = forwardRef(({
         className={`input-field ${error ? 'border-error focus:ring-error' : ''} ${className}`}
         {...props}
       />
-      {error && (
-        <p className="text-sm text-error">{error}</p>
+{error && (
+        <p className="text-xs sm:text-sm text-error">{error}</p>
       )}
     </div>
   )

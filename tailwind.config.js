@@ -28,6 +28,8 @@ scale: {
       },
       spacing: {
         '18': '4.5rem',
+        '1.5': '0.375rem',
+        '2.5': '0.625rem',
       },
       animation: {
         'checkmark': 'checkmark 0.5s ease-out',

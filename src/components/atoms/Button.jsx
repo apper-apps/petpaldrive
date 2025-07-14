@@ -24,10 +24,10 @@ const Button = ({
     ghost: 'text-primary hover:bg-primary hover:bg-opacity-10'
   }
   
-  const sizes = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+const sizes = {
+    sm: 'px-2.5 py-1.5 text-sm sm:px-3',
+    md: 'px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base',
+    lg: 'px-4 py-2 text-base sm:px-6 sm:py-3 sm:text-lg'
   }
   
   const classes = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`
@@ -42,15 +42,15 @@ const Button = ({
       type={type}
       {...props}
     >
-      {loading && (
-        <ApperIcon name="Loader2" className="animate-spin mr-2" size={16} />
+{loading && (
+        <ApperIcon name="Loader2" className="animate-spin mr-1.5 sm:mr-2" size={14} />
       )}
       {icon && iconPosition === 'left' && !loading && (
-        <ApperIcon name={icon} className="mr-2" size={16} />
+        <ApperIcon name={icon} className="mr-1.5 sm:mr-2" size={14} />
       )}
       {children}
       {icon && iconPosition === 'right' && !loading && (
-        <ApperIcon name={icon} className="ml-2" size={16} />
+        <ApperIcon name={icon} className="ml-1.5 sm:ml-2" size={14} />
       )}
     </motion.button>
   )

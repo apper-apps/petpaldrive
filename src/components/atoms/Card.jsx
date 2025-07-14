@@ -4,9 +4,9 @@ const Card = ({ children, className = '', hover = false, onClick, ...props }) =>
   const Component = onClick ? motion.div : 'div'
   
   return (
-    <Component
+<Component
       className={`card ${hover ? 'card-hover cursor-pointer' : ''} ${className}`}
-      whileHover={hover ? { scale: 1.02, y: -4 } : {}}
+      whileHover={hover ? { scale: 1.01, y: -2 } : {}}
       onClick={onClick}
       {...props}
     >
